@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "route": "/api/chat",
+      "methods": ["POST"],
+      "rewrite": "/api/chat",
+      "timeoutSeconds": 600
+    },
+    {
+      "route": "/*",
+      "serve": "/frontend/index.html"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "platform": {
+    "apiRuntime": "python:3.10"
+  },
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+  }
+}

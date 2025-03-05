@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRLA Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- Add React and ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!-- Add Babel for JSX support -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <!-- Add password screen container -->
+    <div id="password-screen"></div>
+    
+    <div id="main-container" class="flex min-h-screen">
+        <!-- Chat Section -->
+        <div id="chat-section" class="flex-1 p-4" style="width: 100%">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-2xl font-bold text-center mb-6 text-gray-800">ALIM Document Chat</h1>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div id="chat-container" class="h-[32rem] overflow-y-auto mb-4 p-4 border rounded">
+                        <!-- Messages will appear here -->
+                    </div>
+                    <div id="pagination-container" class="flex justify-center gap-2 mb-4 hidden"></div>
+                    <div class="flex gap-2">
+                        <input type="text" id="user-input"
+                            class="flex-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            placeholder="Type your query here...">
+                        <button onclick="sendMessage()"
+                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF Viewer Section -->
+        <div id="pdf-section" class="hidden bg-gray-100 border-l border-gray-300" style="width: 0">
+            <div class="sticky top-0 h-screen flex flex-col">
+                <div class="bg-white p-4 border-b border-gray-200 flex justify-between items-center shadow-sm">
+                    <h2 class="text-lg font-semibold text-gray-700" id="pdf-title">Document Viewer</h2>
+                    <button id="close-pdf"
+                        class="text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full p-2 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 relative">
+                    <iframe id="pdf-viewer" class="absolute inset-0 w-full h-full"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add password screen component -->
+    <script type="text/babel">
+        const PasswordScreen = () => {
+            const [password, setPassword] = React.useState('');
+            const [error, setError] = React.useState('');
+            const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+
+            React.useEffect(() => {
+                const auth = sessionStorage.getItem('chatbot_authenticated');
+                if (auth === 'true') {
+                    setIsAuthenticated(true);
+                }
+            }, []);
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                // Replace 'srla1234' with your desired password
+                if (password === 'srla1234') {
+                    setIsAuthenticated(true);
+                    sessionStorage.setItem('chatbot_authenticated', 'true');
+                    setError('');
+                    // Dispatch custom event for main.js
+                    window.dispatchEvent(new Event('authStatusChanged'));
+                } else {
+                    setError('Incorrect password');
+                    setPassword('');
+                }
+            };
+
+            if (isAuthenticated) {
+                return null;
+            }
+
+            return (
+                <div className="fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg p-8 shadow-xl w-full max-w-md">
+                        <div className="flex flex-col items-center space-y-6">
+                            <div className="bg-blue-100 p-3 rounded-full">
+                                <svg className="w-8 h-8 text-blue-600" fill="none" strokeLinecap="round" 
+                                    strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            
+                            <h2 className="text-2xl font-bold text-gray-900">Authentication Required</h2>
+                            
+                            <p className="text-gray-600 text-center">
+                                Please enter the password to access the chatbot.
+                            </p>
+
+                            <form onSubmit={handleSubmit} className="w-full space-y-4">
+                                <input
+                                    type="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="Enter password"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    autoFocus
+                                />
+
+                                {error && (
+                                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                                        {error}
+                                    </div>
+                                )}
+
+                                <button
+                                    type="submit"
+                                    className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
+                                >
+                                    Access Chatbot
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // Render the password screen
+        ReactDOM.render(<PasswordScreen />, document.getElementById('password-screen'));
+    </script>
+
+    <!-- Your existing scripts -->
+    <script src="/static/js/marked.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+[33mcommit 1a2543d0998dc571096d2f51357eb586a23cc1fe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Mon Feb 10 22:52:24 2025 +1000
+
+    investigate error 500 #4
+
+[33mcommit 4a18bd6d2082bc89dfbbec76607f3993b26f10fd[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Mon Feb 10 22:45:33 2025 +1000
+
+    investigate error 500 #3
+
+[33mcommit cb9add38816f545dde75aaefc8b95b24d10451d2[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Mon Feb 10 22:40:24 2025 +1000
+
+    investigate error 500 #2
+
+[33mcommit 03a68fbeb689d514a86440d1a6609add7eb8609f[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Mon Feb 10 22:28:26 2025 +1000
+
+    investigate error 500 #2
+
+[33mcommit 449964012c4e58d0b9c1f1e22faee039f69a9766[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Mon Feb 10 19:01:23 2025 +1000
+
+    investigate error 500
+
+[33mcommit b7f9e460984be33a9a1b1a83d51b29581be7a9d1[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 29 10:37:58 2025 +1000
+
+    removed a uneccessary workflow file (connected to BB env)
+
+[33mcommit a4de4b0e05b3095bb6adc17cd4de67670acf04b7[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 29 10:30:43 2025 +1000
+
+    better looking ordered lists
+
+[33mcommit 407bd3a85584471f8035f80234f1adb7862e47b1[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 22:38:11 2025 +1000
+
+    better looking tables
+
+[33mcommit 8cc0178c0d7b024c5b951b3d35d6160d351d6a37[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 22:26:52 2025 +1000
+
+    collapsible ref #5
+
+[33mcommit 7bc828c6ce7f5374b70e0f379b305c6cb5d0c3ee[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 22:15:09 2025 +1000
+
+    collapsible ref #4
+
+[33mcommit 0b29d9a3ff44e23671c6baa3bfb81c4444a7fb47[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 22:09:25 2025 +1000
+
+    collapsible ref #3
+
+[33mcommit 8d6f2054b50fbb9bbdd342172d5abafeefbb4258[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 22:02:00 2025 +1000
+
+    collapsible ref #2
+
+[33mcommit 1d86acba602aff8b05112a1529be6b00e3b717ef[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 21:57:01 2025 +1000
+
+    collapsible ref
+
+[33mcommit d1708b90f43ae120c4d474f07fc936ad03a5ddcf[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 21:45:05 2025 +1000
+
+    modification for better error handling #3
+
+[33mcommit 4b83149c5cb64a811917dc5b4f48869816b295f5[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 21:37:02 2025 +1000
+
+    modification for better error handling #2
+
+[33mcommit bd2227bada04a20fe894eb70ab5d7fcd4a0443da[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Tue Jan 28 21:11:51 2025 +1000
+
+    modification for better error handling
+
+[33mcommit e9500e46cf6ed3904ed50e5fed67093038e3cc17[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 17:09:35 2025 +1000
+
+    Add collapsible references 11
+
+[33mcommit d6a54f9e3fc9cd9d2e6e9cdae6486c407cf21053[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 17:07:59 2025 +1000
+
+    Add collapsible references 10
+
+[33mcommit 68e9a15d10c6af5b1f3cae998846f2cb2882b008[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 17:04:44 2025 +1000
+
+    Add collapsible references 9
+
+[33mcommit d942ec837468fd776aa6bc544ec50b4332c445b3[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 16:41:48 2025 +1000
+
+    Add collapsible references 8
+
+[33mcommit 06d6eb3150fdbff92773425008feda47419f1246[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 16:28:45 2025 +1000
+
+    Add collapsible references 7
+
+[33mcommit 04e0be812661d5cb34768ae96e65c82f83bd377a[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 16:19:12 2025 +1000
+
+    Add collapsible references 6
+
+[33mcommit 8afdbf7650651545acc926a0dd5a5be10b2e50e0[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 15:52:38 2025 +1000
+
+    Add collapsible references 5
+
+[33mcommit d35b37952000c8b40f94c69e1f8e9aef6414bec4[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 15:36:54 2025 +1000
+
+    Add collapsible references #4
+
+[33mcommit 003ada579f341016b2da65e5da7ebe19d389b074[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 15:16:23 2025 +1000
+
+    Add collapsible references #3
+
+[33mcommit e527c3d278b0e9120405053dcb86fadfbb1f8e5a[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 15:08:33 2025 +1000
+
+    Add collapsible references #2
+
+[33mcommit 28198962d298291a4d5c57097f170e5baccb2424[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 14:46:01 2025 +1000
+
+    Add collapsible references #1
+
+[33mcommit 67010447c9b0f79d3d7a1cfd7196ec6d25fb1dba[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 14:38:56 2025 +1000
+
+    Add references #17
+
+[33mcommit 0c373015291ec224722b82846fe3627fc3014d00[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 14:29:49 2025 +1000
+
+    Add references #16
+
+[33mcommit fa493a93ffff44e481aa08659ec958c4d90781ba[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 13:15:37 2025 +1000
+
+    Add references #15
+
+[33mcommit 1bac5752bf0b01143f4acff23eb8f9dd6716314f[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 12:36:52 2025 +1000
+
+    Add references #14
+
+[33mcommit 04d7781340b1198fcc345fc571cee6a932cba481[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 12:14:04 2025 +1000
+
+    Add references #13
+
+[33mcommit dfcd623198f1755792b7c22febbf54e4c365d230[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 11:27:34 2025 +1000
+
+    Add references #12
+
+[33mcommit 6b46ffec1bb07a2fdd807392be77faa3dac54b09[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 11:05:52 2025 +1000
+
+    Add references #11
+
+[33mcommit 09faaabba1649d6b6e38e96334649d4d04f1e647[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 11:03:32 2025 +1000
+
+    Add references #10
+
+[33mcommit 663ee55e6cc5b331b74b22a9f16986073ceeea59[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 10:47:48 2025 +1000
+
+    Add references #9
+
+[33mcommit 8c95d7d44345cb30fc2c7f7a5ed8be92fd9f8b00[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 10:44:33 2025 +1000
+
+    Add references #8
+
+[33mcommit 4466f4e2d8d1ac5395b30852f2e5749ef91055ae[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 10:35:43 2025 +1000
+
+    Add references #7
+
+[33mcommit 9cca4fd89a7781fb02d586b06f3f2ad26d010dcf[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 10:35:18 2025 +1000
+
+    Add references #6
+
+[33mcommit 2feaea322ff5f7fa24643b8b07d9a454da94a6fa[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 10:28:10 2025 +1000
+
+    Add references #5
+
+[33mcommit a45771cd77e2b5c91b50301d7cd918e293da0185[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 10:25:00 2025 +1000
+
+    Add references #4
+
+[33mcommit 150a76b1c34c86b8fbda0b2982e6f3cea482affb[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 10:18:29 2025 +1000
+
+    Add references #3
+
+[33mcommit 08922c399312243a7e62a9d87dcb77a68982e977[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 09:58:34 2025 +1000
+
+    Fix incorrect source adding
+
+[33mcommit 4f2c445d222a04681c266bdb2c5b318e980f5765[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 09:52:36 2025 +1000
+
+    Add references
+
+[33mcommit 5527d26c6b4c09aef34d568e4576a99c72e0bcea[m
+Author: Max Huang <max.huang@blackbook.ai>
+Date:   Fri Jan 24 09:35:47 2025 +1000
+
+    Display in markdown
+
+[33mcommit aec07ce54358c8c468a1e0c189c8b0683cd18e0d[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 22:47:28 2025 +1000
+
+    display responses in markdown #7
+
+[33mcommit 7b8c8bcf04d215addfff2d604bb5211926e027cf[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 22:33:09 2025 +1000
+
+    display responses in markdown #6
+
+[33mcommit 961d2af26a12864441b82009e960ca00f3a51749[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 20:12:45 2025 +1000
+
+    Revert "display responses in markdown #1"
+    
+    This reverts commit e8870d8db12905008a59b44dec5bd4c5be06e090.
+
+[33mcommit e8870d8db12905008a59b44dec5bd4c5be06e090[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 20:06:24 2025 +1000
+
+    display responses in markdown #1
+
+[33mcommit 6a392a462a3cb1f0bc583362fe9831acfafc33cb[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 14:23:04 2025 +1000
+
+    added Access-Control-Allow-Origin * to headers for route /api/chat
+
+[33mcommit c823223bf33e892d9ea15170e99a5585d2077d37[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 13:36:23 2025 +1000
+
+    added allow all origin in global header #2
+
+[33mcommit 6584086bdc4b1c2660b1433ba17194bd4dd96788[m
+Merge: eabc0a1 e0aed7c
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 13:34:54 2025 +1000
+
+    Merge branch 'main' of https://github.com/NguyenQuangHuy1305/srla-chatbot-v2
+
+[33mcommit eabc0a1d2db16551fa6f356a657a71832c9a89dc[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 13:34:15 2025 +1000
+
+    added allow all origin in global header
+
+[33mcommit e0aed7c732e8319b4f4b92f6ffd0fcd2114ca9c7[m
+Author: NguyenQuangHuy1305 <91877692+NguyenQuangHuy1305@users.noreply.github.com>
+Date:   Thu Jan 23 10:32:52 2025 +1000
+
+    ci: add Azure Static Web Apps workflow file
+    on-behalf-of: @Azure opensource@microsoft.com
+
+[33mcommit dd99e40fd7fe095d8d6fe66d259629fb96f8fc9a[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 09:58:41 2025 +1000
+
+    added platform apiruntime
+
+[33mcommit 1a7e3dc3aca4e45775136c11f18229806f9e46ee[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Thu Jan 23 09:30:47 2025 +1000
+
+    fix 405 error #9
+
+[33mcommit a49213f0d04210e66847561ff50560867f063383[m
+Merge: 158dffa 05489c9
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 23:43:02 2025 +1000
+
+    Merge branch 'main' of https://github.com/NguyenQuangHuy1305/srla-chatbot-v2
+
+[33mcommit 158dffa87ce0caa824c7d8fc3bedbdfc2776ae21[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 23:42:12 2025 +1000
+
+    fix 405 error #8
+
+[33mcommit 05489c910fb5f5503767f6591ffdbf5d803fccde[m
+Author: NguyenQuangHuy1305 <91877692+NguyenQuangHuy1305@users.noreply.github.com>
+Date:   Wed Jan 22 16:44:40 2025 +1000
+
+    Update static web app route configuration
+
+[33mcommit 3279e88f64d84d4ef34379137618980e074a80ba[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 16:44:07 2025 +1000
+
+    fix 405 error #7
+
+[33mcommit a5f7572e5abc05cd0d3d8bfa1bde962f014e7169[m
+Author: NguyenQuangHuy1305 <91877692+NguyenQuangHuy1305@users.noreply.github.com>
+Date:   Wed Jan 22 16:43:41 2025 +1000
+
+    Update static web app route configuration
+
+[33mcommit e337b5f6f422641c5016392561eba427f65a2e4d[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 16:37:00 2025 +1000
+
+    fix 405 error #6
+
+[33mcommit 7f99c722b2237368701eeb2c4aa046d2e42744d3[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 16:10:21 2025 +1000
+
+    fix 405 error #5
+
+[33mcommit ebbb329f976f81c4a135261e9eff9f76ba78f350[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 16:02:00 2025 +1000
+
+    fix 405 error #4
+
+[33mcommit c2ea00b7843a66eb2b203a1e3afa42ccb53b739a[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 16:01:39 2025 +1000
+
+    fix 405 error #3
+
+[33mcommit 398c7469af2c22aec547f9111f1f25375f7456b0[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 15:21:19 2025 +1000
+
+    fix 405 error #2
+
+[33mcommit f1fef79b5124552c03d752cc50ed5f40f5e9a6bf[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 15:15:46 2025 +1000
+
+    fix 405 error #1
+
+[33mcommit d60a11f87391b04e3504d7d254beb61cd58d3b9e[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 15:08:50 2025 +1000
+
+    add method POST
+
+[33mcommit e7e535078d484e446a1a856a429dbf06013d8eb6[m
+Author: NguyenQuangHuy1305 <91877692+NguyenQuangHuy1305@users.noreply.github.com>
+Date:   Wed Jan 22 15:01:19 2025 +1000
+
+    ci: add Azure Static Web Apps workflow file
+    on-behalf-of: @Azure opensource@microsoft.com
+
+[33mcommit c4e2ad73d9880ea17526f6d599ad23dc60d1a598[m
+Author: NguyenQuangHuy1305 <91877692+NguyenQuangHuy1305@users.noreply.github.com>
+Date:   Wed Jan 22 14:28:25 2025 +1000
+
+    ci: add Azure Static Web Apps workflow file
+    on-behalf-of: @Azure opensource@microsoft.com
+
+[33mcommit 795803c23a4f6d6f1025409cbe426ecd7bcf62ad[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 14:26:48 2025 +1000
+
+    test1
+
+[33mcommit 15960880d530128332779ca3e527be1bdf161458[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Huy Nguyen <Mr831817toe@gmail.com>
+Date:   Wed Jan 22 14:21:54 2025 +1000
+
+    initial commit
