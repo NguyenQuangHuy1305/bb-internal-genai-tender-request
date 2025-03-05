@@ -9,11 +9,6 @@ import sys
 import platform
 from datetime import datetime
 from typing import Dict, Any
-from opencensus.ext.azure.log_exporter import AzureLogHandler
-from opencensus.ext.azure.trace_exporter import AzureExporter
-from opencensus.trace import config_integration
-from opencensus.trace.samplers import ProbabilitySampler
-from opencensus.trace.tracer import Tracer
 
 app = func.FunctionApp()
 
@@ -29,28 +24,9 @@ required_vars = [
     "AZURE_AI_SEARCH_KEY",
     "AZURE_OPENAI_ENDPOINT",
     "AZURE_OPENAI_KEY",
-    "FUNCTION_KEY",
-    "APPLICATIONINSIGHTS_CONNECTION_STRING"
+    "FUNCTION_KEY"
+    # Removed APPLICATIONINSIGHTS_CONNECTION_STRING
 ]
-
-# Initialize Application Insights
-try:
-    appinsights_connection_string = os.environ.get('APPLICATIONINSIGHTS_CONNECTION_STRING')
-    if appinsights_connection_string:
-        logger.addHandler(AzureLogHandler(
-            connection_string=appinsights_connection_string
-        ))
-        tracer = Tracer(
-            exporter=AzureExporter(
-                connection_string=appinsights_connection_string
-            ),
-            sampler=ProbabilitySampler(1.0)
-        )
-        config_integration.trace_integrations(['requests'])
-    else:
-        print("WARNING: APPLICATIONINSIGHTS_CONNECTION_STRING not found")
-except Exception as e:
-    print(f"ERROR initializing Application Insights: {str(e)}")
 
 def get_system_info() -> Dict[str, Any]:
     """Get basic system information for debugging"""
@@ -189,17 +165,12 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
             
             response_text = response.text
             
+            # Log the entire response for debugging
+            logger.info(f"Prompt flow response for request {request_id}: {response_text[:1000]}...")
+            
             # Specifically check for backend call failure
             if 'Backend call failure' in response_text:
-                logger.error("Backend call failure detected", extra={
-                    "custom_dimensions": {
-                        "request_id": request_id,
-                        "error_type": "backend_call_failure",
-                        "response_text": response_text,
-                        "status_code": response.status_code,
-                        "request_time": request_time
-                    }
-                })
+                logger.error(f"Backend call failure detected for request {request_id}")
                 return create_error_response(
                     "Backend call failure",
                     "The prompt flow service encountered a backend failure",
@@ -207,20 +178,10 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
                     request_id,
                     {
                         **debug_info,
-                        "response_text": response_text,
+                        "response_preview": response_text[:500],
                         "error_type": "backend_call_failure"
                     }
                 )
-            
-            # If no backend failure, log the successful response
-            logger.info("Prompt flow response", extra={
-                "custom_dimensions": {
-                    "request_id": request_id,
-                    "status_code": response.status_code,
-                    "response_data": response_text,
-                    "request_time": request_time
-                }
-            })
             
             response.raise_for_status()
             
@@ -257,7 +218,9 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
         try:
             response_data = response.json()
             debug_info["response_size"] = len(json.dumps(response_data))
+            logger.info(f"Successfully parsed JSON response for request {request_id}")
         except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse JSON response for request {request_id}: {str(e)}")
             return create_error_response(
                 "Invalid response",
                 "Failed to parse response from prompt flow service",
@@ -279,6 +242,7 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
         }
 
         # Success case
+        logger.info(f"Returning successful response for request {request_id}")
         return func.HttpResponse(
             json.dumps({
                 "data": response_data,
@@ -289,6 +253,7 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
         )
 
     except Exception as e:
+        logger.error(f"Unhandled exception in chat function for request {request_id}: {str(e)}")
         error_info = {
             "request_id": request_id,
             "error_type": type(e).__name__,
